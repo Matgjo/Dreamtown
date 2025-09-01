@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercantec's oplæringscenter</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        body {
+            font-family: Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: black;
+            color: white;
+            padding: 80px 20px 80px 20px;
+            overflow: hidden;
+            min-height: 300px;
+            position:relative;
+        }
+
+        .header-images {
+            display: flex;
+            flex-direction: row;
+            gap: 24px; 
+            align-items: center;
+            justify-content: center;
+            color:white;
+        }
+            header h1  {
+                text-shadow: 2px 0px 0px rgba(0,0,0,0.18), 0 1px 0 #fff;
+                font-weight: 900;
+            }
+        .headerP {
+            color: white;
+            text-align: center;
+            font-size: 1.1em;
+            padding-bottom:30px;
+        }
+
+            header::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100px; 
+                background: white; 
+                z-index: 1;
+                font-family: Roboto, sans-serif;
+            }
+
+            header > * {
+                position: relative;
+                z-index: 2;
+            }
+        .header-logo, .header-banner {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+
+        section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: auto;
+            font-family: Roboto, sans-serif;
+        }
+
+        #about {
+            font-family: Roboto, sans-serif;
+        }
+
+        #services {
+            font-family: Roboto, sans-serif;
+        }
+
+        #contact {
+            font-family: Roboto, sans-serif;
+
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #dc9018;
+            color: white;
+            font-family: Roboto, sans-serif;
+            background: black;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 32px 8px 32px rgba(0,0,0,0.18);
+        }
+
+        #services li::marker {
+            color: black;
+        }
+        #services ul {
+            list-style: none; 
+            padding-left: 19px;
+        }
+
+        #services li {
+            position: relative;
+            padding-left: 19px;
+        }
+
+            #services li::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: black;
+                font-size: 20px;
+                line-height: 1;
+                top: 1.6px;
+            }
+
+        section {
+            padding: 60px 20px;
+
+            font-family: Roboto, sans-serif;
+        }
+
+        .side-by-side {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+            .side-by-side section {
+                flex: 1 1 0;
+                min-width: 0;
+                background: #fff;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding-top: 0;
+
+            }
+                .side-by-side section h2,
+                .side-by-side section h3,
+                .side-by-side section p {
+                    margin-top: 0;
+                }
+
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .image-slot {
+            background: white;
+            border-radius: 12px;
+            width: 350px;
+            height:350px;
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+        .section-divider {
+            border: none;
+            border-top: 2px solid black;
+            margin: 48px auto 40px auto;
+            width: 100%;
+           
+           
+        }
+        h2 {
+            font-family: Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            font-size:22px;
+            
+        }
+        @media (max-width: 900px) {
+            .side-by-side {
+                flex-direction: column;
+                gap: 24px;
+                padding: 0 10px;
+            }
+
+                .side-by-side section {
+                    width: 100%;
+                    min-width: 0;
+                    padding: 0;
+                }
+
+            .image-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .image-slot {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 4/3;
+            }
+
+            header {
+                flex-direction: column;
+                padding: 60px 10px 30px 10px;
+                min-height: 250px;
+            }
+
+                header img {
+                    width: 90% !important;
+                    height: auto !important;
+                    margin-bottom: 16px !important;
+                }
+            .header-logo, .header-banner {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section, .image-grid {
+                padding: 20px 5px;
+                max-width: 100%;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-slot {
+                width: 100%;
+                min-width: 0;
+                height: auto;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            header {
+                padding: 30px 5px 75px 5px;
+            }
+
+            footer {
+                padding: 10px 5px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-images">
+            <img src="mercantec.png" alt="" style="width:500px; height: 150px; border-radius: 10px;padding-bottom:30px;">
+            <img src="billede.png" alt="" style="max-width:100%; max-height: 100%; border-radius: 10px; margin-bottom:38px;">
+        </div>
+        <div class="headerP">
+            <p>Mail: vuf@mercantec.dk | Telefon: 2027 7033 | Vi kan kontaktes mellem 08:00-15:30</p>
+        </div>
+    </header>
+
+
+
+    <section id="about">
+        <img src="bannertop.jpg" alt="" style="max-width: 100%; max-height: 100%; border-radius: 10px;">
+        <p style="grid-column: 2; text-align: center; align-self: center; font-weight: bold;"><a href="https://www.dreamtown.ngo/">DREAMTOWN website</a></p>
+    </section>
+
+    <div class="side-by-side">
+        <section id="services">
+            <h2>Lej en Lærling – Lokal Lærling - Global Forandring </h2>
+
+            <p>Forestil dig en dag, hvor danske lærlinge lægger værktøjet i hænderne – ikke kun for at lære, men for at gøre en forskel. Med projektet “Lej en Lærling – Lokal Lærling = Global Forandring” giver vi unge på erhvervsuddannelser mulighed for at bruge deres faglighed til noget større: at hjælpe andre unge – på den anden side af kloden. I løbet af en dag kan private borgere i lokalområdet “leje” en lærling til praktiske opgaver som havearbejde, malerprojekter eller mindre reparationer. Lærlingen arbejder frivilligt, og hele beløbet går ubeskåret til Youth Dream Center i Sierra Leone, som støtter udsatte unge med uddannelse og udviklingsmuligheder. Det er en dag med fællesskab, håndværk og global solidaritet – hvor unge hjælper unge, med hænderne og med hjertet. </p>
+            <br />
+            <h2><b>Unge hjælper unge</b></h2>
+            <p>Gennem projektet får lærlinge muligheden for at prøve kræfter med reelle arbejdsopgaver udenfor deres skole eller praktiksted. Borgeren/kunden tilbydes en prisvenlig og samfundsbevidst service. Igennem arbejdet samler vores lærlinge penge ind til et godt formål - at hjælpe unge i Sierra Leone i uddannelse. </p>
+            <br />
+            <h2>Hvor går pengene hen? </h2>
+            <p>Alle indsamlede penge går direkte og 100% ubeskåret til Dreamtown gennem deres indsamlingstilladelse. Mercantec har ikke adgang til eller gevinst af de indsamlede penge. </p>
+        </section>
+
+        <section id="contact">
+
+            <h2>Hvem er Dreamtown:</h2>
+            <p>
+                Dreamtown er en dansk nonprofitorganisation, der arbejder for at hjælpe unge på tværs af Afrika. Organisationen arbejder lige nu i Sierra Leone, Uganda, Kenya og Zimbabwe.<br /><br /> Gennem et omfattende netværk af samarbejdspartnere arbejder Dreamtown for at fremme unges trivsel og skabe trygge rammer ved at udvikle bæredygtige løsninger inden for uddannelse, iværksætteri og samfundsudvikling.
+                Særligt unge kvinder er i fokus, så de får bedre muligheder for at påvirke deres egen fremtid.<br /><br /> Mange af de lande Dreamtown samarbejder med, er præget af korruption, vold mod kvinder og børn samt tvangsægteskaber. Derfor har organisationen en central rolle i at hjælpe de unge med at tilegne sig altafgørende færdigheder indenfor blandt andet IT og andre helt basale færdigheder såsom madlavning, syning, beauty etc.<br /> <br />Disse kompetencer giver dem mulighed for at blive økonomiske selvstændige og uafhængige af forældre, samt ægtefæller.
+                Dreamtowns arbejde har et stærkt fokus på bæredygtighed og langsigtet udvikling, så unge får bedre forudsætninger for at skabe en positiv forandring i deres samfund.<br /><br />
+            </p>
+
+        </section>
+
+    </div>
+
+    <div style="text-align: center; margin: 32px 0;">
+        <b>Scan QR koden for at læse mere</b><br />
+        <img src="qr-code.png" alt="qr code dreamtown" width="250" height="250" style="margin-top: 12px; border-radius: 10px;">
+    </div>
+
+    <hr class="section-divider">
+    <div class="image-grid">
+        <div class="image-slot"><img src="Left1.png" alt="" style="max-width: 100%; max-height: 100%; border-radius: 10px;"></div>
+        <div class="image-slot"><img src="centerbillede1.png" alt="" style="max-width: 100%; height: 262px; border-radius: 10px;"></div>
+        <div class="image-slot"><img src="right1.jpg" alt="text" style="max-width: 100%; height: 262px; border-radius: 10px;"></div>
+        <div class="image-slot"><img src="left2.png" alt="text" style="max-width: 100%; max-height: 100%; border-radius: 10px;"></div>
+        <div class="image-slot"><img src="centerbillede2.png" alt="" style="max-width: 100%; max-height: 100%; border-radius: 10px;"></div>
+        <div class="image-slot"><img src="right2.png" alt="text" style="max-width: 100%; height: 262px; border-radius: 10px;"></div>
+        <p style="grid-column: 2; text-align: center; align-self: center; font-weight: bold;"><a href="https://www.dreamtown.ngo/">DREAMTOWN website</a></p>
+
+    </div>
+
+    <footer>
+        <p>Mail: vuf@mercantec.dk  <br />Telefon: 2027 7033<br /> Vi kan kontaktes mellem 08:00-15:30  </p>
+    </footer>
+
+</body>
+</html>
